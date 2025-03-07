@@ -88,8 +88,9 @@ app.post('/loginuser',async(req,res)=>{
 
         res.cookie('jwt', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'none',
+            secure: true,
+            sameSite: 'None',
+            domain:".vercel.app",
             maxAge: 24 * 60 * 60 * 1000,
         });
 
@@ -117,8 +118,9 @@ app.get("/checkAuth", (req, res) => {
   app.post("/logout", (req, res) => {
     res.clearCookie("jwt", {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "none",
+      secure: true,
+      domain:".vercel.app",
+      sameSite: "None",
     });
   
     res.status(200).json({ message: "Logged out successfully" });
