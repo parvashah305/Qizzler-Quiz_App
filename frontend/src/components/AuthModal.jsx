@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import Modal from "./Modal";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Cookies from 'universal-cookie';
+
 
 const AuthModals = ({ isLoginOpen, isSignupOpen, onCloseLogin, onCloseSignup, openSignup, openLogin }) => {
   const {
@@ -32,6 +34,8 @@ const AuthModals = ({ isLoginOpen, isSignupOpen, onCloseLogin, onCloseSignup, op
 
         const result=await res.json()
 
+        const cookies = new Cookies();
+        cookies.set('token', token, {path:'/'})
        
         console.log("Token:",result.token)
 
