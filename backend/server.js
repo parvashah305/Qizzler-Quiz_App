@@ -94,7 +94,7 @@ app.post('/loginuser',async(req,res)=>{
             maxAge: 24 * 60 * 60 * 1000,
         });
 
-        res.status(200).json({token,message:"LoggedIn Successfully"})
+        res.status(200).json({token:token,message:"LoggedIn Successfully"})
     } catch (error) {
         console.log(error)
         return res.status(500).json({message:"Internal Server Error"})
