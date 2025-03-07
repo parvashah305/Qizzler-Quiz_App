@@ -32,8 +32,8 @@ const AuthModals = ({ isLoginOpen, isSignupOpen, onCloseLogin, onCloseSignup, op
 
         const result=await res.json()
 
-        const token=res.body.token
-        console.log(token)
+        const data = await res.json()
+        console.log(data)
 
         if(res.ok){
             toast.success("Login Successfull",{
