@@ -12,7 +12,7 @@ const SingleQuiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/quizzes/${id}`);
+        const response = await fetch(`https://qizzler-backend.vercel.app/quizzes/${id}`);
         const data = await response.json();
 
         if (response.ok) {
@@ -39,7 +39,7 @@ const SingleQuiz = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/quizzes/${id}/submit`, {
+      const response = await fetch(`https://qizzler-backend.vercel.app/quizzes/${id}/submit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

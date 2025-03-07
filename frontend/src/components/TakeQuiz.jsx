@@ -11,7 +11,7 @@ const TakeQuiz = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await fetch("http://localhost:4000/getallquizzes", {
+        const response = await fetch("https://qizzler-backend.vercel.app/getallquizzes", {
           method: "GET",
           credentials: "include",
         });

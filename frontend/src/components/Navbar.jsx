@@ -14,7 +14,7 @@ const Navbar = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:4000/checkAuth", {
+        const res = await fetch("https://qizzler-backend.vercel.app/checkAuth", {
           method: "GET",
           credentials: "include",
         });
@@ -33,7 +33,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:4000/logout", {
+      await fetch("https://qizzler-backend.vercel.app/logout", {
         method: "POST",
         credentials: "include",
       });

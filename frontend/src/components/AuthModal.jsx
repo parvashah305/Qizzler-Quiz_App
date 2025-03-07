@@ -21,7 +21,7 @@ const AuthModals = ({ isLoginOpen, isSignupOpen, onCloseLogin, onCloseSignup, op
     }
 
     try {
-        const res= await fetch("http://localhost:4000/loginuser",{
+        const res= await fetch("https://qizzler-backend.vercel.app/loginuser",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -68,7 +68,7 @@ const AuthModals = ({ isLoginOpen, isSignupOpen, onCloseLogin, onCloseSignup, op
     }
 
     try {
-        const res=await fetch("http://localhost:4000/registeruser",{
+        const res=await fetch("https://qizzler-backend.vercel.app/registeruser",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

@@ -14,7 +14,7 @@ const CreateQuiz = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch("http://localhost:4000/checkAuth", {
+        const response = await fetch("https://qizzler-backend.vercel.app/checkAuth", {
           credentials: "include",
         });
 
@@ -74,7 +74,7 @@ const CreateQuiz = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/quizzes", {
+      const response = await fetch("https://qizzler-backend.vercel.app/quizzes", {
         method: "POST",
         credentials: "include",
         headers: {
