@@ -13,7 +13,7 @@ const PORT=4000
 
 app.use(cors({
     origin: (origin, callback) => {
-        const allowedOrigins = ['http://localhost:5173'];
+        const allowedOrigins = ['https://qizzler.vercel.app'];
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
